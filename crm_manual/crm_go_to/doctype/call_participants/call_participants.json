@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-07 15:38:32.808873",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "participant_type",
+  "related_employee",
+  "column_break_cmnx",
+  "name1",
+  "contact"
+ ],
+ "fields": [
+  {
+   "fieldname": "participant_type",
+   "fieldtype": "Select",
+   "label": "Participant Type"
+  },
+  {
+   "fieldname": "related_employee",
+   "fieldtype": "Link",
+   "label": "Related Employee",
+   "options": "Employee Master"
+  },
+  {
+   "fieldname": "column_break_cmnx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Phone",
+   "label": "Contact"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-07 15:40:45.944328",
+ "modified_by": "Administrator",
+ "module": "CRM-Go-To",
+ "name": "Call Participants",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

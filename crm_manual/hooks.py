@@ -5,6 +5,9 @@ app_description = "CRM"
 app_email = "crm@gmail.com"
 app_license = "mit"
 
+doctype_dashboard = {
+    "CRM Lead": "crm_manual.crm_go_to.doctype.crm_lead.crm_lead.get_dashboard_data"
+}
 # Apps
 # ------------------
 

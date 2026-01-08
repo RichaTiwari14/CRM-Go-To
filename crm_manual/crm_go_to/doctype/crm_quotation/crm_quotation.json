@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-05 11:35:58.041881",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "lead",
+  "proposal_summary",
+  "estimated_value",
+  "validity_date",
+  "approval_required",
+  "approval_status",
+  "approver",
+  "rejection_reason",
+  "attached_proposal",
+  "column_break_shgg",
+  "quotation_no",
+  "solution_scope",
+  "revision_count"
+ ],
+ "fields": [
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "proposal_summary",
+   "fieldtype": "Small Text",
+   "label": "Proposal Summary"
+  },
+  {
+   "fieldname": "estimated_value",
+   "fieldtype": "Currency",
+   "label": "Estimated Value"
+  },
+  {
+   "fieldname": "validity_date",
+   "fieldtype": "Date",
+   "label": "Validity Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "approval_required",
+   "fieldtype": "Check",
+   "label": "Approval Required"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Pend"
+  },
+  {
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "label": "Approver",
+   "options": "Employee Master"
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason"
+  },
+  {
+   "fieldname": "attached_proposal",
+   "fieldtype": "Attach",
+   "label": "Attached Proposal"
+  },
+  {
+   "fieldname": "column_break_shgg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quotation_no",
+   "fieldtype": "Data",
+   "label": "Quotation No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "solution_scope",
+   "fieldtype": "Text Editor",
+   "label": "Solution Scope"
+  },
+  {
+   "fieldname": "revision_count",
+   "fieldtype": "Small Text",
+   "label": "Revision Count"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-05 11:56:48.404089",
+ "modified_by": "Administrator",
+ "module": "CRM-Go-To",
+ "name": "CRM Quotation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

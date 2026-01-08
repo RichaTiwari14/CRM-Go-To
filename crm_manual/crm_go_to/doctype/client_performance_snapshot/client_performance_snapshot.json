@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-29 13:22:24.428611",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "period",
+  "metric",
+  "metric_value",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "period",
+   "fieldtype": "Date",
+   "label": "Period"
+  },
+  {
+   "fieldname": "metric",
+   "fieldtype": "Data",
+   "label": "Metric"
+  },
+  {
+   "fieldname": "metric_value",
+   "fieldtype": "Float",
+   "label": "Metric Value"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-12-29 13:22:54.683697",
+ "modified_by": "Administrator",
+ "module": "CRM-Go-To",
+ "name": "Client Performance Snapshot",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

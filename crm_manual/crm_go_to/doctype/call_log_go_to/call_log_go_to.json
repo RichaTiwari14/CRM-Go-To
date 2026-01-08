@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: CALL-{from}-TO-{to}-{####}",
+ "creation": "2026-01-07 15:28:55.940376",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "call_details_tab",
+  "call_details_section",
+  "from",
+  "call_type",
+  "call_status",
+  "call_duration_mins",
+  "column_break_zxyz",
+  "to",
+  "interaction_channel",
+  "call_time",
+  "notes_section",
+  "call_summary",
+  "lead_interest_level",
+  "column_break_iixw",
+  "next_follow_up_date",
+  "follow_up_type",
+  "recording_attachment",
+  "call_participants_tab",
+  "details_section",
+  "call_particiants",
+  "reference_tab",
+  "linked_lead",
+  "linked_client",
+  "interaction_owner"
+ ],
+ "fields": [
+  {
+   "fieldname": "call_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Call Details"
+  },
+  {
+   "fieldname": "call_details_section",
+   "fieldtype": "Section Break",
+   "label": "Call Details"
+  },
+  {
+   "fieldname": "call_type",
+   "fieldtype": "Select",
+   "label": "Call Type",
+   "options": "Incoming\nOutgoing\nMissed\nFollow Up\nWhatsapp\nMeeting"
+  },
+  {
+   "fieldname": "call_time",
+   "fieldtype": "Datetime",
+   "label": "Call Time"
+  },
+  {
+   "fieldname": "call_status",
+   "fieldtype": "Select",
+   "label": "Call Status",
+   "options": "Completed\nNo Response\nFailed"
+  },
+  {
+   "fieldname": "column_break_zxyz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "interaction_channel",
+   "fieldtype": "Select",
+   "label": "Interaction Channel",
+   "options": "Call\nWhatsapp\nEmail\nMeeting"
+  },
+  {
+   "fieldname": "call_duration_mins",
+   "fieldtype": "Float",
+   "label": "Call Duration (Mins)"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "call_summary",
+   "fieldtype": "Small Text",
+   "label": "Call Summary"
+  },
+  {
+   "fieldname": "lead_interest_level",
+   "fieldtype": "Select",
+   "label": "Lead Interest Level",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "column_break_iixw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_follow_up_date",
+   "fieldtype": "Date",
+   "label": "Next Follow Up Date"
+  },
+  {
+   "fieldname": "follow_up_type",
+   "fieldtype": "Select",
+   "label": "Follow Up Type",
+   "options": "Call\nWhatsapp\nMeeting\nEmail"
+  },
+  {
+   "fieldname": "recording_attachment",
+   "fieldtype": "Attach",
+   "label": "Recording/ Attachment"
+  },
+  {
+   "fieldname": "call_participants_tab",
+   "fieldtype": "Tab Break",
+   "label": "Call Participants"
+  },
+  {
+   "fieldname": "reference_tab",
+   "fieldtype": "Tab Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "linked_lead",
+   "fieldtype": "Link",
+   "label": "Linked Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "linked_client",
+   "fieldtype": "Link",
+   "label": "Linked Client",
+   "options": "Client Master"
+  },
+  {
+   "fieldname": "interaction_owner",
+   "fieldtype": "Link",
+   "label": "Interaction Owner",
+   "options": "Employee Master"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "call_particiants",
+   "fieldtype": "Table",
+   "label": "Call Particiants",
+   "options": "Call Participants"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Data",
+   "label": "From"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-08 14:06:55.308863",
+ "modified_by": "Administrator",
+ "module": "CRM-Go-To",
+ "name": "Call Log Go-To",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

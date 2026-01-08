@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PROSPECT-.####",
+ "creation": "2026-01-07 11:51:23.852873",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "prospect_info_tab",
+  "basic_info_section",
+  "lead",
+  "column_break_yxgh",
+  "prospect_name",
+  "column_break_ecnb",
+  "follow_up_section",
+  "next_follow_up_date",
+  "is_latest",
+  "previous_prospecting",
+  "column_break_putq",
+  "status",
+  "revision_no",
+  "revision_history",
+  "requirements_tab",
+  "requirements_gathering_section",
+  "requirement_summary",
+  "proposed_solution",
+  "column_break_dxtb",
+  "business_problem",
+  "expected_budget",
+  "expected_timeline",
+  "priority",
+  "requirement_items_section",
+  "table_kkaf",
+  "stake_holders_tab",
+  "stake_holders_section",
+  "decision_maker",
+  "column_break_oadc",
+  "contact_person",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "prospect_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Prospect Info"
+  },
+  {
+   "fieldname": "basic_info_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Info"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "column_break_yxgh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prospect_name",
+   "fieldtype": "Data",
+   "label": "Prospect Name"
+  },
+  {
+   "fieldname": "column_break_ecnb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "follow_up_section",
+   "fieldtype": "Section Break",
+   "label": "Follow Up"
+  },
+  {
+   "fieldname": "next_follow_up_date",
+   "fieldtype": "Date",
+   "label": "Next Follow Up Date"
+  },
+  {
+   "fieldname": "column_break_putq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIn Discussion\nApproved\nRejected"
+  },
+  {
+   "fieldname": "requirements_tab",
+   "fieldtype": "Tab Break",
+   "label": "Requirements"
+  },
+  {
+   "fieldname": "requirements_gathering_section",
+   "fieldtype": "Section Break",
+   "label": "Requirements Gathering"
+  },
+  {
+   "fieldname": "requirement_summary",
+   "fieldtype": "Small Text",
+   "label": "Requirement Summary"
+  },
+  {
+   "fieldname": "proposed_solution",
+   "fieldtype": "Small Text",
+   "label": "Proposed Solution"
+  },
+  {
+   "fieldname": "column_break_dxtb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "business_problem",
+   "fieldtype": "Small Text",
+   "label": "Business Problem"
+  },
+  {
+   "fieldname": "expected_budget",
+   "fieldtype": "Currency",
+   "label": "Expected Budget"
+  },
+  {
+   "fieldname": "expected_timeline",
+   "fieldtype": "Data",
+   "label": "Expected Timeline"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh"
+  },
+  {
+   "fieldname": "stake_holders_tab",
+   "fieldtype": "Tab Break",
+   "label": "Stake Holders"
+  },
+  {
+   "fieldname": "stake_holders_section",
+   "fieldtype": "Section Break",
+   "label": "Stake Holders"
+  },
+  {
+   "fieldname": "decision_maker",
+   "fieldtype": "Data",
+   "label": "Decision Maker"
+  },
+  {
+   "fieldname": "column_break_oadc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Prospecting",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "requirement_items_section",
+   "fieldtype": "Section Break",
+   "label": "Requirement Items"
+  },
+  {
+   "fieldname": "table_kkaf",
+   "fieldtype": "Table",
+   "options": "Prospecting Requirements Items"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_latest",
+   "fieldtype": "Check",
+   "label": "Is Latest",
+   "read_only": 1
+  },
+  {
+   "fieldname": "revision_no",
+   "fieldtype": "Int",
+   "label": "Revision No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "previous_prospecting",
+   "fieldtype": "Link",
+   "label": "Previous Prospecting",
+   "options": "Prospecting",
+   "read_only": 1
+  },
+  {
+   "fieldname": "revision_history",
+   "fieldtype": "HTML",
+   "label": "Revision History"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-08 13:33:55.092619",
+ "modified_by": "Administrator",
+ "module": "CRM-Go-To",
+ "name": "Prospecting",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_seen": 1
+}

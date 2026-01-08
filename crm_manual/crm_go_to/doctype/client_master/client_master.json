@@ -1,0 +1,371 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DEAL-.####",
+ "creation": "2025-12-29 12:40:21.015935",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "client_details_section",
+  "client_code",
+  "client_name",
+  "client_type",
+  "account_status",
+  "column_break_lewa",
+  "source_lead",
+  "account_manager",
+  "description",
+  "contact_tab",
+  "contact_details_section",
+  "primary_email",
+  "website",
+  "column_break_ixjz",
+  "primary_phone",
+  "alternate_phone",
+  "section_break_psln",
+  "client_contact",
+  "individual_details_section",
+  "first_name",
+  "last_name",
+  "designation",
+  "company_details_tab",
+  "company_details_section",
+  "company_name",
+  "brand_name",
+  "region",
+  "column_break_ctkl",
+  "industry",
+  "company_size",
+  "address",
+  "business_engagement_section",
+  "engagement_type",
+  "onboarding_stage",
+  "column_break_mdsz",
+  "start_date",
+  "remarks",
+  "contract_tab",
+  "client_contract",
+  "platforms_tab",
+  "client_platform_mapping",
+  "performance_tab",
+  "client_performace_metrics",
+  "health_summary_section",
+  "health_score",
+  "health_status",
+  "last_health_update",
+  "component_scores_section",
+  "delivery_score",
+  "communication_score",
+  "column_break_hchp",
+  "engagement_score",
+  "risk_score"
+ ],
+ "fields": [
+  {
+   "fieldname": "client_code",
+   "fieldtype": "Data",
+   "label": "Client Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Client Type",
+   "options": "Individual\nCompany",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Account Status",
+   "options": "Onboarding\nActive\nDormant\nClosed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lewa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source_lead",
+   "fieldtype": "Link",
+   "label": "Source Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "account_manager",
+   "fieldtype": "Data",
+   "label": "Account Manager"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "primary_email",
+   "fieldtype": "Data",
+   "label": "Primary Email"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "column_break_ixjz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "primary_phone",
+   "fieldtype": "Phone",
+   "label": "Primary Phone"
+  },
+  {
+   "fieldname": "alternate_phone",
+   "fieldtype": "Phone",
+   "label": "Alternate Phone"
+  },
+  {
+   "fieldname": "individual_details_section",
+   "fieldtype": "Section Break",
+   "label": "Individual Details"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "company_details_section",
+   "fieldtype": "Section Break",
+   "label": "Company Details"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "brand_name",
+   "fieldtype": "Data",
+   "label": "Brand Name"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region"
+  },
+  {
+   "fieldname": "column_break_ctkl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Select",
+   "label": "Industry",
+   "options": "Tele\nRealstate\nTechnical"
+  },
+  {
+   "fieldname": "company_size",
+   "fieldtype": "Select",
+   "label": "Company Size",
+   "options": "10-20 Employee\n20-30 Employee\n>50\n>100"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "business_engagement_section",
+   "fieldtype": "Section Break",
+   "label": "Business Engagement"
+  },
+  {
+   "fieldname": "engagement_type",
+   "fieldtype": "Select",
+   "label": "Engagement Type",
+   "options": "Retainer\nProject\nHybrid"
+  },
+  {
+   "fieldname": "onboarding_stage",
+   "fieldtype": "Select",
+   "label": "Onboarding Stage",
+   "options": "Initial\nDocs Pending\nKYC\nKickoff\nLive"
+  },
+  {
+   "fieldname": "column_break_mdsz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "client_details_section",
+   "fieldtype": "Section Break",
+   "label": "Client Details"
+  },
+  {
+   "fieldname": "contact_tab",
+   "fieldtype": "Tab Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "section_break_psln",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "client_contact",
+   "fieldtype": "Table",
+   "label": "Client Contact",
+   "options": "Client Contact Person"
+  },
+  {
+   "fieldname": "company_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Company Details"
+  },
+  {
+   "fieldname": "contract_tab",
+   "fieldtype": "Tab Break",
+   "label": "Contract"
+  },
+  {
+   "fieldname": "platforms_tab",
+   "fieldtype": "Tab Break",
+   "label": "Platforms"
+  },
+  {
+   "fieldname": "performance_tab",
+   "fieldtype": "Tab Break",
+   "label": "Performance"
+  },
+  {
+   "fieldname": "client_contract",
+   "fieldtype": "Table",
+   "label": "Client Contract",
+   "options": "Client Contract"
+  },
+  {
+   "fieldname": "client_platform_mapping",
+   "fieldtype": "Table",
+   "label": "Client Platform Mapping",
+   "options": "Client Platform Mapping"
+  },
+  {
+   "fieldname": "client_performace_metrics",
+   "fieldtype": "Table",
+   "label": "Client Performace Metrics",
+   "options": "Client Performance Snapshot"
+  },
+  {
+   "fieldname": "health_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Health Summary"
+  },
+  {
+   "fieldname": "health_score",
+   "fieldtype": "Int",
+   "label": "Health Score"
+  },
+  {
+   "fieldname": "health_status",
+   "fieldtype": "Select",
+   "label": "Health Status",
+   "options": "Healthy\nWarning\nCritical"
+  },
+  {
+   "fieldname": "last_health_update",
+   "fieldtype": "Datetime",
+   "label": "Last Health Update"
+  },
+  {
+   "fieldname": "component_scores_section",
+   "fieldtype": "Section Break",
+   "label": "Component Scores"
+  },
+  {
+   "fieldname": "delivery_score",
+   "fieldtype": "Int",
+   "label": "Delivery Score"
+  },
+  {
+   "fieldname": "communication_score",
+   "fieldtype": "Int",
+   "label": "Communication Score"
+  },
+  {
+   "fieldname": "column_break_hchp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "engagement_score",
+   "fieldtype": "Int",
+   "label": "Engagement Score"
+  },
+  {
+   "fieldname": "risk_score",
+   "fieldtype": "Int",
+   "label": "Risk Score"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-30 09:29:34.926279",
+ "modified_by": "Administrator",
+ "module": "CRM-Go-To",
+ "name": "Client Master",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

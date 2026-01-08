@@ -1,0 +1,317 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LEAD-.####",
+ "creation": "2025-12-29 11:47:15.660341",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "lead_tab",
+  "is_company",
+  "first_name",
+  "last_name",
+  "company_name",
+  "lead_name",
+  "phone",
+  "column_break_nlpy",
+  "lead_source",
+  "lead_stage",
+  "lead_owner",
+  "email",
+  "client_created",
+  "details_tab",
+  "lead_details_section",
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "attribution_channel",
+  "organization",
+  "job_title",
+  "website",
+  "inactivity_status",
+  "inactivity_flag",
+  "response_delay_risk",
+  "column_break_cazt",
+  "sla_priority",
+  "expected_response_time",
+  "next_follow_up_date",
+  "last_follow_up",
+  "lead_score",
+  "lead_health",
+  "lead_status",
+  "marketing_source",
+  "attachments_tab",
+  "attack_image",
+  "call_logs_tab",
+  "call_logs_html",
+  "prospecting_tab",
+  "prospecting_html",
+  "quotations_tab",
+  "quotations_html"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lead_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Lead Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nlpy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_company",
+   "fieldtype": "Check",
+   "label": "Is Company"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "lead_source",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lead Source",
+   "options": "Lead Source Go-To",
+   "reqd": 1
+  },
+  {
+   "default": "New",
+   "fieldname": "lead_stage",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lead Stage",
+   "options": "Lead Stage",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lead_details_section",
+   "fieldtype": "Section Break",
+   "label": "Lead Details"
+  },
+  {
+   "fieldname": "utm_source",
+   "fieldtype": "Data",
+   "label": "UTM Source"
+  },
+  {
+   "fieldname": "utm_medium",
+   "fieldtype": "Data",
+   "label": "UTM Medium"
+  },
+  {
+   "fieldname": "utm_campaign",
+   "fieldtype": "Data",
+   "label": "UTM Campaign"
+  },
+  {
+   "fieldname": "lead_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lead Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sla_priority",
+   "fieldtype": "Select",
+   "label": "SLA Priority",
+   "options": "Low\nMedium\nHigh"
+  },
+  {
+   "fieldname": "column_break_cazt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_response_time",
+   "fieldtype": "Datetime",
+   "label": "Expected Response Time"
+  },
+  {
+   "fieldname": "next_follow_up_date",
+   "fieldtype": "Date",
+   "label": "Next Follow Up Date"
+  },
+  {
+   "fieldname": "lead_score",
+   "fieldtype": "Int",
+   "label": "Lead Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lead_health",
+   "fieldtype": "Float",
+   "label": "Lead Health",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lead_status",
+   "fieldtype": "Select",
+   "label": "Lead Status",
+   "options": "Open\nActive\nClosed\nFollow Up"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lead_tab",
+   "fieldtype": "Tab Break",
+   "label": "Lead"
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Data",
+   "label": "Organization"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "label": "Job Title"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "attachments_tab",
+   "fieldtype": "Tab Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attack_image",
+   "fieldtype": "Attach Image",
+   "label": "Attach Image"
+  },
+  {
+   "fieldname": "client_created",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Client Created",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "inactivity_flag",
+   "fieldtype": "Check",
+   "label": "Inactivity Flag"
+  },
+  {
+   "default": "0",
+   "fieldname": "response_delay_risk",
+   "fieldtype": "Check",
+   "label": "Response Delay Risk"
+  },
+  {
+   "fieldname": "last_follow_up",
+   "fieldtype": "Datetime",
+   "label": "Last Follow Up"
+  },
+  {
+   "fieldname": "inactivity_status",
+   "fieldtype": "Select",
+   "label": "Inactivity Status",
+   "options": "Active\nidle\nAt-Risk"
+  },
+  {
+   "fieldname": "attribution_channel",
+   "fieldtype": "Select",
+   "label": "Attribution Channel",
+   "options": "Paid Search\nPaid Social\nOrganic Social\nOrganic Search\nEmail Campaign\nReferral / Partner\nDirect Traffic\nOther"
+  },
+  {
+   "fieldname": "marketing_source",
+   "fieldtype": "Data",
+   "label": "Marketing Source"
+  },
+  {
+   "fieldname": "call_logs_tab",
+   "fieldtype": "Tab Break",
+   "label": "Call Logs"
+  },
+  {
+   "fieldname": "call_logs_html",
+   "fieldtype": "HTML",
+   "label": "Call Logs"
+  },
+  {
+   "fieldname": "prospecting_tab",
+   "fieldtype": "Tab Break",
+   "label": "Prospecting"
+  },
+  {
+   "fieldname": "prospecting_html",
+   "fieldtype": "HTML",
+   "label": "Propecting"
+  },
+  {
+   "fieldname": "quotations_tab",
+   "fieldtype": "Tab Break",
+   "label": "Quotations"
+  },
+  {
+   "fieldname": "quotations_html",
+   "fieldtype": "HTML",
+   "label": "Quotations"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-08 13:03:11.762908",
+ "modified_by": "Administrator",
+ "module": "CRM-Go-To",
+ "name": "CRM Lead",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
