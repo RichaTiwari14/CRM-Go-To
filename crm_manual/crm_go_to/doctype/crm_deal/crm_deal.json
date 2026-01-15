@@ -1,0 +1,199 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-01-13 18:52:20.785216",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "deal_name",
+  "source_lead",
+  "deal_status",
+  "expected_value",
+  "column_break_tpju",
+  "client",
+  "account_manager",
+  "deal_owner",
+  "probability",
+  "expected_close_date",
+  "commercials_tab",
+  "quotation_reference",
+  "find_value",
+  "discount_approval",
+  "contract_duration",
+  "column_break_dmwu",
+  "payment_terms",
+  "billing_type",
+  "start_date",
+  "decision",
+  "decision_maker",
+  "reason_lost",
+  "won_date",
+  "lost_date",
+  "column_break_svqe",
+  "closure_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "deal_name",
+   "fieldtype": "Data",
+   "label": "Deal Name"
+  },
+  {
+   "fieldname": "source_lead",
+   "fieldtype": "Link",
+   "label": "Source Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "deal_status",
+   "fieldtype": "Select",
+   "label": "Deal Status",
+   "options": "Open\nWon\nLost\nOn Hold"
+  },
+  {
+   "fieldname": "expected_value",
+   "fieldtype": "Currency",
+   "label": "Expected Value"
+  },
+  {
+   "fieldname": "column_break_tpju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Client Master"
+  },
+  {
+   "fieldname": "account_manager",
+   "fieldtype": "Link",
+   "label": "Account Manager",
+   "options": "CRM User"
+  },
+  {
+   "fieldname": "deal_owner",
+   "fieldtype": "Link",
+   "label": "Deal Owner",
+   "options": "CRM User"
+  },
+  {
+   "fieldname": "probability",
+   "fieldtype": "Percent",
+   "label": "Probability"
+  },
+  {
+   "fieldname": "expected_close_date",
+   "fieldtype": "Date",
+   "label": "Expected Close Date"
+  },
+  {
+   "fieldname": "commercials_tab",
+   "fieldtype": "Tab Break",
+   "label": "Commercials"
+  },
+  {
+   "fieldname": "quotation_reference",
+   "fieldtype": "Link",
+   "label": "Quotation Reference",
+   "options": "CRM Quotation"
+  },
+  {
+   "fieldname": "find_value",
+   "fieldtype": "Currency",
+   "label": "Find Value"
+  },
+  {
+   "default": "0",
+   "fieldname": "discount_approval",
+   "fieldtype": "Check",
+   "label": "Discount Approval"
+  },
+  {
+   "fieldname": "contract_duration",
+   "fieldtype": "Data",
+   "label": "Contract Duration"
+  },
+  {
+   "fieldname": "column_break_dmwu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Small Text",
+   "label": "Payment Terms"
+  },
+  {
+   "fieldname": "billing_type",
+   "fieldtype": "Select",
+   "label": "Billing Type",
+   "options": "One Time\nRecurring"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "decision",
+   "fieldtype": "Section Break",
+   "label": "Decision & Closure"
+  },
+  {
+   "fieldname": "decision_maker",
+   "fieldtype": "Data",
+   "label": "Decision Maker"
+  },
+  {
+   "fieldname": "reason_lost",
+   "fieldtype": "Select",
+   "label": "Reason (Lost)"
+  },
+  {
+   "fieldname": "won_date",
+   "fieldtype": "Date",
+   "label": "Won Date"
+  },
+  {
+   "fieldname": "lost_date",
+   "fieldtype": "Date",
+   "label": "Lost Date"
+  },
+  {
+   "fieldname": "column_break_svqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "closure_notes",
+   "fieldtype": "Text",
+   "label": "Closure Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-14 11:36:32.962834",
+ "modified_by": "Administrator",
+ "module": "CRM-Go-To",
+ "name": "CRM Deal",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

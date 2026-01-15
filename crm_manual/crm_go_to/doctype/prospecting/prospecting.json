@@ -9,9 +9,13 @@
   "prospect_info_tab",
   "basic_info_section",
   "lead",
+  "email",
   "column_break_yxgh",
   "prospect_name",
+  "organization",
   "column_break_ecnb",
+  "contact",
+  "job_title",
   "follow_up_section",
   "next_follow_up_date",
   "is_latest",
@@ -60,9 +64,11 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "lead.lead_name",
    "fieldname": "prospect_name",
-   "fieldtype": "Data",
-   "label": "Prospect Name"
+   "fieldtype": "Read Only",
+   "label": "Prospect Name",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_ecnb",
@@ -74,6 +80,7 @@
    "label": "Follow Up"
   },
   {
+   "fetch_from": "lead.next_follow_up_date",
    "fieldname": "next_follow_up_date",
    "fieldtype": "Date",
    "label": "Next Follow Up Date"
@@ -201,13 +208,38 @@
    "fieldname": "revision_history",
    "fieldtype": "HTML",
    "label": "Revision History"
+  },
+  {
+   "fetch_from": "lead.email",
+   "fieldname": "email",
+   "fieldtype": "Read Only",
+   "label": "Email"
+  },
+  {
+   "fetch_from": "lead.organization",
+   "fieldname": "organization",
+   "fieldtype": "Read Only",
+   "label": "Organization"
+  },
+  {
+   "fetch_from": "lead.phone",
+   "fieldname": "contact",
+   "fieldtype": "Read Only",
+   "label": "Contact",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "lead.job_title",
+   "fieldname": "job_title",
+   "fieldtype": "Read Only",
+   "label": "Job Title"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-08 13:33:55.092619",
+ "modified": "2026-01-09 13:22:51.962070",
  "modified_by": "Administrator",
  "module": "CRM-Go-To",
  "name": "Prospecting",

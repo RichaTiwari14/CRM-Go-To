@@ -297,18 +297,21 @@
   {
    "fieldname": "health_score",
    "fieldtype": "Int",
-   "label": "Health Score"
+   "label": "Health Score",
+   "read_only": 1
   },
   {
    "fieldname": "health_status",
    "fieldtype": "Select",
    "label": "Health Status",
-   "options": "Healthy\nWarning\nCritical"
+   "options": "Healthy\nWarning\nCritical",
+   "read_only": 1
   },
   {
    "fieldname": "last_health_update",
    "fieldtype": "Datetime",
-   "label": "Last Health Update"
+   "label": "Last Health Update",
+   "read_only": 1
   },
   {
    "fieldname": "component_scores_section",
@@ -318,12 +321,14 @@
   {
    "fieldname": "delivery_score",
    "fieldtype": "Int",
-   "label": "Delivery Score"
+   "label": "Delivery Score",
+   "read_only": 1
   },
   {
    "fieldname": "communication_score",
    "fieldtype": "Int",
-   "label": "Communication Score"
+   "label": "Communication Score",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_hchp",
@@ -332,18 +337,20 @@
   {
    "fieldname": "engagement_score",
    "fieldtype": "Int",
-   "label": "Engagement Score"
+   "label": "Engagement Score",
+   "read_only": 1
   },
   {
    "fieldname": "risk_score",
    "fieldtype": "Int",
-   "label": "Risk Score"
+   "label": "Risk Score",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-30 09:29:34.926279",
+ "modified": "2026-01-14 12:33:21.050703",
  "modified_by": "Administrator",
  "module": "CRM-Go-To",
  "name": "Client Master",

@@ -8,6 +8,25 @@ app_license = "mit"
 doctype_dashboard = {
     "CRM Lead": "crm_manual.crm_go_to.doctype.crm_lead.crm_lead.get_dashboard_data"
 }
+app_include_css = "/assets/crm_manual/css/crm_lead.css"
+
+# scheduler_events = {
+#     "hourly": [
+#         "crm_manual.crm_go_to.sla.lead_tat_checker.check_lead_tat"
+#     ]
+# }
+
+scheduler_events = {
+    "cron": {
+        "* * * * *": [
+            "crm_manual.crm_go_to.utils.sla_engine.check_lead_sla"
+        ]
+    }
+}
+fixtures = [
+    "Client Script",
+    "Server Script"
+]
 # Apps
 # ------------------
 

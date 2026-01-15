@@ -1,23 +1,43 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:QUOTATION-{lead}-{####}",
  "creation": "2026-01-05 11:35:58.041881",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "basic_info_tab",
+  "quotation_no",
+  "customer_name",
   "lead",
+  "column_break_shgg",
+  "quotation_to",
+  "party",
+  "status",
+  "section_break_weao",
   "proposal_summary",
   "estimated_value",
-  "validity_date",
   "approval_required",
-  "approval_status",
   "approver",
   "rejection_reason",
+  "validity_date",
   "attached_proposal",
-  "column_break_shgg",
-  "quotation_no",
+  "column_break_juhp",
   "solution_scope",
-  "revision_count"
+  "revision_count",
+  "amended_from",
+  "is_latest",
+  "workflow_state",
+  "item_tab",
+  "table_tgfh",
+  "section_break_vjvv",
+  "total_qty",
+  "discount_amount",
+  "tax_amount",
+  "column_break_hcft",
+  "total_amount",
+  "net_total",
+  "grand_total"
  ],
  "fields": [
   {
@@ -34,12 +54,16 @@
   {
    "fieldname": "estimated_value",
    "fieldtype": "Currency",
-   "label": "Estimated Value"
+   "in_list_view": 1,
+   "label": "Estimated Value",
+   "reqd": 1
   },
   {
    "fieldname": "validity_date",
    "fieldtype": "Date",
-   "label": "Validity Date"
+   "in_list_view": 1,
+   "label": "Validity Date",
+   "reqd": 1
   },
   {
    "default": "0",
@@ -48,16 +72,10 @@
    "label": "Approval Required"
   },
   {
-   "fieldname": "approval_status",
-   "fieldtype": "Select",
-   "label": "Approval Status",
-   "options": "Pend"
-  },
-  {
    "fieldname": "approver",
    "fieldtype": "Link",
    "label": "Approver",
-   "options": "Employee Master"
+   "options": "CRM User"
   },
   {
    "fieldname": "rejection_reason",
@@ -86,17 +104,127 @@
   },
   {
    "fieldname": "revision_count",
-   "fieldtype": "Small Text",
-   "label": "Revision Count"
+   "fieldtype": "Int",
+   "label": "Revision Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quotation_to",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Quotation To",
+   "options": "CRM Lead\nProspecting\nCustomer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Dynamic Link",
+   "label": "Party",
+   "options": "quotation_to",
+   "reqd": 1
+  },
+  {
+   "fieldname": "basic_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Basic Info"
+  },
+  {
+   "fieldname": "item_tab",
+   "fieldtype": "Tab Break",
+   "label": "Item"
+  },
+  {
+   "fieldname": "table_tgfh",
+   "fieldtype": "Table",
+   "options": "Quotation Item"
+  },
+  {
+   "fieldname": "section_break_weao",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_juhp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vjvv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount"
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Amount"
+  },
+  {
+   "fieldname": "column_break_hcft",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "label": "Net Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nCancelled"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "CRM Quotation"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_latest",
+   "fieldtype": "Check",
+   "label": "Is Latest"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Select",
+   "label": "Workflow State"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2026-01-05 11:56:48.404089",
+ "modified": "2026-01-13 15:56:42.418951",
  "modified_by": "Administrator",
  "module": "CRM-Go-To",
  "name": "CRM Quotation",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

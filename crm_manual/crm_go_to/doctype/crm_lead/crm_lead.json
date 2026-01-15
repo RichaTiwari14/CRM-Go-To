@@ -19,6 +19,8 @@
   "lead_owner",
   "email",
   "client_created",
+  "lead_stage_entered_on",
+  "deal_created",
   "details_tab",
   "lead_details_section",
   "utm_source",
@@ -126,7 +128,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Lead Owner",
-   "options": "User",
+   "options": "CRM Role",
    "reqd": 1
   },
   {
@@ -216,9 +218,10 @@
   },
   {
    "fieldname": "client_created",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "hidden": 1,
    "label": "Client Created",
+   "options": "Client Master",
    "read_only": 1
   },
   {
@@ -284,12 +287,25 @@
    "fieldname": "quotations_html",
    "fieldtype": "HTML",
    "label": "Quotations"
+  },
+  {
+   "fieldname": "lead_stage_entered_on",
+   "fieldtype": "Datetime",
+   "label": "Lead Stage Entered On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deal_created",
+   "fieldtype": "Link",
+   "label": "Deal Created",
+   "options": "CRM Deal",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-08 13:03:11.762908",
+ "modified": "2026-01-14 11:57:05.522377",
  "modified_by": "Administrator",
  "module": "CRM-Go-To",
  "name": "CRM Lead",
