@@ -24,8 +24,21 @@ scheduler_events = {
     }
 }
 fixtures = [
-    "Client Script",
-    "Server Script"
+    {
+        "doctype": "Client Script"
+    },
+    {
+        "doctype": "Server Script"
+    },
+    {
+        "doctype": "Workflow"
+    },
+    {
+        "doctype": "Custom Field"
+    },
+    {
+        "doctype": "Property Setter"
+    }
 ]
 # Apps
 # ------------------
