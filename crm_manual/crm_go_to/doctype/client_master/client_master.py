@@ -53,7 +53,7 @@ class ClientMaster(Document):
 def calculate_communication_score(client):
     last_call = frappe.db.get_value(
         "Call Log Go-To",
-        {"client": client.name},
+        {"linked_client": client.client_name},
         "creation",
         order_by="creation desc"
     )
@@ -78,12 +78,12 @@ def calculate_engagement_score(client):
 
     interactions += frappe.db.count(
         "Call Log Go-To",
-        {"client": client.name}
+        {"linked_client": client.client_name}
     )
 
     interactions += frappe.db.count(
         "CRM Quotation",
-        {"client": client.name}
+        {"client": client.client_name}
     )
 
     if interactions >= 5:
@@ -98,7 +98,7 @@ def calculate_risk_score(client):
     breaches = frappe.db.count(
         "CRM Lead",
         {
-            "client_created": client.name,
+            "client_created": client.client_name,
             "response_delay_risk": "High"
         }
     )

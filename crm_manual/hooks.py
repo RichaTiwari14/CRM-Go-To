@@ -23,24 +23,24 @@ scheduler_events = {
         ]
     }
 }
-fixtures = [
-    {
-        "doctype": "Client Script"
-    },
-    {
-        "doctype": "Server Script"
-    },
-    {
-        "doctype": "Workflow"
-    },
-    {
-        "doctype": "Custom Field"
-    },
-    {
-        "doctype": "Property Setter"
-    }
-]
-# Apps
+# fixtures = [
+#     {
+#         "doctype": "Client Script"
+#     },
+#     {
+#         "doctype": "Server Script"
+#     },
+#     {
+#         "doctype": "Workflow"
+#     },
+#     {
+#         "doctype": "Custom Field"
+#     },
+#     {
+#         "doctype": "Property Setter"
+#     }
+# ]
+# # Apps
 # ------------------
 
 # required_apps = []
