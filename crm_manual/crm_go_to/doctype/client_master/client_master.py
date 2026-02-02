@@ -4,6 +4,33 @@ from frappe.utils import nowdate, now_datetime, date_diff, get_datetime
 
 
 class ClientMaster(Document):
+    def before_save(self):
+        self.validate_client_contracts()
+
+    def validate_client_contracts(self):
+        active_count = 0
+
+        for c in self.client_contract or []:
+
+            # Validate date range
+            if c.start_date and c.end_date and c.end_date < c.start_date:
+                frappe.throw(
+                    "End Date cannot be before Start Date in Contract Row"
+                )
+
+            # Count active contracts
+            if c.status == "Active":
+                active_count += 1
+
+        # Prevent multiple active retainers
+        if active_count > 1:
+            frappe.throw(
+                "Only one Active contract is allowed at a time"
+            )
+
+        # Auto account status update
+        if active_count == 1:
+            self.account_status = "Active"
 
     def on_update(self):
         # avoid infinite loop

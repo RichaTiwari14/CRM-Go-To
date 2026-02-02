@@ -5,6 +5,7 @@
 
 import frappe
 from frappe.model.document import Document
+from frappe.utils import now_datetime
 
 
 FORWARD_ORDER = [
@@ -18,6 +19,8 @@ FORWARD_ORDER = [
 class CallLogGoTo(Document):
 
     def after_insert(self):
+        if self.linked_lead:
+            reset_lead_inactivity(self.linked_lead)
         if not self.linked_lead:
             return
 
@@ -41,3 +44,14 @@ def make_from_lead(lead):
     doc.linked_lead = lead
     doc.insert(ignore_permissions=True)  # Safe insert
     return doc.name  
+
+
+def reset_lead_inactivity(lead_name):
+    frappe.db.set_value(
+        "CRM Lead",
+        lead_name,
+        {
+            "inactivity_flag": 0,
+            "last_activity_on": now_datetime()
+        }
+    )    

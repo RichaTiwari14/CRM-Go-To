@@ -1,6 +1,6 @@
 import frappe
 from frappe.model.document import Document
-from frappe.utils import nowdate
+from frappe.utils import nowdate, now_datetime
 
 class CRMQuotation(Document):
 
@@ -13,6 +13,9 @@ class CRMQuotation(Document):
             self.on_send_for_approval()
 
     def on_send_for_approval(self):
+
+        if self.lead:
+            reset_lead_inactivity(self.lead)
         if not self.lead:
             return
 
@@ -51,8 +54,9 @@ class CRMQuotation(Document):
             self.lead,
             {
                 "lead_stage": "Converted to Deal",
-                "client_created": client,
-                "deal_created": deal
+                "has_client_created": 1,
+                "has_deal_created": 1
+
             }
         )
 
@@ -115,3 +119,13 @@ def create_deal_from_quotation(quotation, client):
     deal.insert(ignore_permissions=True)
 
     return deal.name
+
+def reset_lead_inactivity(lead_name):
+    frappe.db.set_value(
+        "CRM Lead",
+        lead_name,
+        {
+            "inactivity_flag": 0,
+            "last_activity_on": now_datetime()
+        }
+    ) 

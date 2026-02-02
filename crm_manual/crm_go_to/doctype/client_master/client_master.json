@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "DEAL-.####",
+ "autoname": "Client-.####",
  "creation": "2025-12-29 12:40:21.015935",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -46,7 +46,10 @@
   "contract_tab",
   "client_contract",
   "platforms_tab",
-  "client_platform_mapping",
+  "platform",
+  "social_media_handle_url",
+  "platform_id",
+  "status",
   "performance_tab",
   "client_performace_metrics",
   "health_summary_section",
@@ -131,12 +134,12 @@
   },
   {
    "fieldname": "primary_phone",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": "Primary Phone"
   },
   {
    "fieldname": "alternate_phone",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": "Alternate Phone"
   },
   {
@@ -278,12 +281,6 @@
    "options": "Client Contract"
   },
   {
-   "fieldname": "client_platform_mapping",
-   "fieldtype": "Table",
-   "label": "Client Platform Mapping",
-   "options": "Client Platform Mapping"
-  },
-  {
    "fieldname": "client_performace_metrics",
    "fieldtype": "Table",
    "label": "Client Performace Metrics",
@@ -345,12 +342,34 @@
    "fieldtype": "Int",
    "label": "Risk Score",
    "read_only": 1
+  },
+  {
+   "fieldname": "platform",
+   "fieldtype": "Select",
+   "label": "Platform",
+   "options": "Instagram\nFacebook\nLinkedIn\nYoutube\nWebsite"
+  },
+  {
+   "fieldname": "social_media_handle_url",
+   "fieldtype": "Data",
+   "label": "Social Media Handle/ URL"
+  },
+  {
+   "fieldname": "platform_id",
+   "fieldtype": "Data",
+   "label": "Platform ID"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDisabled"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-14 12:33:21.050703",
+ "modified": "2026-01-19 13:04:32.758184",
  "modified_by": "Administrator",
  "module": "CRM-Go-To",
  "name": "Client Master",

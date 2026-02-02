@@ -1,0 +1,32 @@
+{
+ "attach_files": "",
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.lead_stage == \"New\" and doc.inactivity_flag == 0\r\n",
+ "creation": "2026-01-19 11:36:49.841661",
+ "date_changed": "lead_stage_entered_on",
+ "days_in_advance": 1,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "CRM Lead",
+ "enabled": 1,
+ "event": "Days After",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Lead {{ doc.name }} has been in {{ doc.lead_stage }} stage \nfor more than the allowed SLA time.</p>\n\n<p>Please take action to avoid escalation.</p>\n",
+ "message_type": "Markdown",
+ "modified": "2026-01-20 15:36:48.491082",
+ "modified_by": "Administrator",
+ "module": "CRM-Go-To",
+ "name": "SLA Notification",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner",
+   "receiver_by_role": "Administrator"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "SLA Alert: Lead Pending Action"
+}

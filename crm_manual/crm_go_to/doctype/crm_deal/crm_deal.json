@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{client}-Deal-{####}",
  "creation": "2026-01-13 18:52:20.785216",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,12 +10,15 @@
   "source_lead",
   "deal_status",
   "expected_value",
+  "project",
   "column_break_tpju",
   "client",
   "account_manager",
   "deal_owner",
   "probability",
   "expected_close_date",
+  "section_break_wffl",
+  "project_created",
   "commercials_tab",
   "quotation_reference",
   "find_value",
@@ -69,13 +73,13 @@
    "fieldname": "account_manager",
    "fieldtype": "Link",
    "label": "Account Manager",
-   "options": "CRM User"
+   "options": "User"
   },
   {
    "fieldname": "deal_owner",
    "fieldtype": "Link",
    "label": "Deal Owner",
-   "options": "CRM User"
+   "options": "User"
   },
   {
    "fieldname": "probability",
@@ -167,15 +171,35 @@
    "fieldname": "closure_notes",
    "fieldtype": "Text",
    "label": "Closure Notes"
+  },
+  {
+   "fieldname": "section_break_wffl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "project_created",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Project Created",
+   "read_only": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project Master",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-14 11:36:32.962834",
+ "modified": "2026-01-20 11:14:47.980790",
  "modified_by": "Administrator",
  "module": "CRM-Go-To",
  "name": "CRM Deal",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

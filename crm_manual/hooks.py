@@ -10,19 +10,30 @@ doctype_dashboard = {
 }
 app_include_css = "/assets/crm_manual/css/crm_lead.css"
 
+scheduler_events = {
+    "daily": [
+        "crm_manual.crm_go_to.doctype.utils.sla_engine.test_mark_not_contacted_1_min",
+        "crm_manual.crm_go_to.doctype.utils.sla_engine.sla_stage_followup_engine",
+        "crm_manual.crm_go_to.doctype.utils.sla_engine.update_lead_inactivity_status"
+    ],
+    "hourly": [
+        "crm_manual.crm_go_to.doctype.utils.sla_engine.send_sla_breach_alerts"
+    ]
+}
+doctype_js = {
+    "CRM Lead": "public/js/crm_lead.js",
+    "Lead Interaction Log": "public/js/crm_lead.js",
+    "Client Master": "public/js/client_master.js",
+    "CRM Quotation": "public/js/crm_quotation.js",
+    "Prospecting": "public/js/prospecting.js"
+}
 # scheduler_events = {
 #     "hourly": [
 #         "crm_manual.crm_go_to.sla.lead_tat_checker.check_lead_tat"
 #     ]
 # }
 
-scheduler_events = {
-    "cron": {
-        "* * * * *": [
-            "crm_manual.crm_go_to.utils.sla_engine.check_lead_sla"
-        ]
-    }
-}
+
 # fixtures = [
 #     {
 #         "doctype": "Client Script"

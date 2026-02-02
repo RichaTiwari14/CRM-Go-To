@@ -22,7 +22,7 @@
 
 import frappe
 from frappe.model.document import Document
-
+from frappe.utils import now_datetime
 
 class Prospecting(Document):
 
@@ -42,6 +42,8 @@ class Prospecting(Document):
         🔁 On FIRST Prospecting creation:
         → Move Lead stage to 'Prospecting'
         """
+        if self.lead:
+            reset_lead_inactivity(self.lead)
         if not self.lead:
             return
 
@@ -73,3 +75,13 @@ class Prospecting(Document):
                     f"on creation of Prospecting <b>{self.name}</b>."
                 )
             }).insert(ignore_permissions=True)
+
+def reset_lead_inactivity(lead_name):
+    frappe.db.set_value(
+        "CRM Lead",
+        lead_name,
+        {
+            "inactivity_flag": 0,
+            "last_activity_on": now_datetime()
+        }
+    ) 

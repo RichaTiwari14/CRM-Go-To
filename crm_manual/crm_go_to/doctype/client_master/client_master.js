@@ -6,3 +6,19 @@
 
 // 	},
 // });
+frappe.ui.form.on("Client Master", {
+    refresh(frm) {
+        if (frm.doc.health_status === "Critical") {
+            frm.dashboard.set_headline_alert(
+                "Client Health Critical ⚠",
+                "red"
+            );
+        }
+        if (frm.doc.health_status === "At Risk") {
+            frm.dashboard.set_headline_alert(
+                "Client Needs Attention",
+                "orange"
+            );
+        }
+    }
+});
