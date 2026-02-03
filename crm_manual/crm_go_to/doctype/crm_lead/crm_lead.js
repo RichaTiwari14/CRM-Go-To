@@ -103,37 +103,37 @@ frappe.ui.form.on("CRM Lead", {
             frm.set_df_property(f, "hidden", 0)
         );
         show_tabs_in_ui(frm);
+        if (frm.doc.lead_stage === "Converted to Deal") {
+            // Go To Client
+            frm.add_custom_button("Go To Client", () => {
+                frappe.db.get_list("Client Master", {
+                    filters: { source_lead: frm.doc.name },
+                    fields: ["name"],
+                    limit: 1
+                }).then(res => {
+                    if (res.length) {
+                        frappe.set_route("Form", "Client Master", res[0].name);
+                    } else {
+                        frappe.msgprint("No Client found for this Lead");
+                    }
+                });
+            }, "Actions");
 
-        // Go To Client
-        frm.add_custom_button("Go To Client", () => {
-            frappe.db.get_list("Client Master", {
-                filters: { source_lead: frm.doc.name },
-                fields: ["name"],
-                limit: 1
-            }).then(res => {
-                if (res.length) {
-                    frappe.set_route("Form", "Client Master", res[0].name);
-                } else {
-                    frappe.msgprint("No Client found for this Lead");
-                }
-            });
-        }, "Actions");
-
-        // Go To Deal
-        frm.add_custom_button("Go To Deal", () => {
-            frappe.db.get_list("CRM Deal", {
-                filters: { source_lead: frm.doc.name },
-                fields: ["name"],
-                limit: 1
-            }).then(res => {
-                if (res.length) {
-                    frappe.set_route("Form", "CRM Deal", res[0].name);
-                } else {
-                    frappe.msgprint("No Deal found for this Lead");
-                }
-            });
-        }, "Actions");
-
+            // Go To Deal
+            frm.add_custom_button("Go To Deal", () => {
+                frappe.db.get_list("CRM Deal", {
+                    filters: { source_lead: frm.doc.name },
+                    fields: ["name"],
+                    limit: 1
+                }).then(res => {
+                    if (res.length) {
+                        frappe.set_route("Form", "CRM Deal", res[0].name);
+                    } else {
+                        frappe.msgprint("No Deal found for this Lead");
+                    }
+                });
+            }, "Actions");
+        }
         if (frm.doc.lead_stage === "Converted to Deal") {
             frm.set_df_property("lead_stage", "read_only", 1);
         }

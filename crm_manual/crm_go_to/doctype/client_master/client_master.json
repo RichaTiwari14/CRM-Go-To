@@ -61,7 +61,13 @@
   "communication_score",
   "column_break_hchp",
   "engagement_score",
-  "risk_score"
+  "risk_score",
+  "quotations_tab",
+  "quotation_section",
+  "quotations_list",
+  "deals_tab",
+  "deals_section",
+  "deal_list"
  ],
  "fields": [
   {
@@ -364,12 +370,42 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Active\nDisabled"
+  },
+  {
+   "fieldname": "quotations_tab",
+   "fieldtype": "Tab Break",
+   "label": "Quotations"
+  },
+  {
+   "fieldname": "quotation_section",
+   "fieldtype": "Section Break",
+   "label": "Quotation"
+  },
+  {
+   "fieldname": "quotations_list",
+   "fieldtype": "HTML",
+   "label": "Quotations list"
+  },
+  {
+   "fieldname": "deals_tab",
+   "fieldtype": "Tab Break",
+   "label": "Deals"
+  },
+  {
+   "fieldname": "deals_section",
+   "fieldtype": "Section Break",
+   "label": "Deals"
+  },
+  {
+   "fieldname": "deal_list",
+   "fieldtype": "HTML",
+   "label": "Deal List"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 13:04:32.758184",
+ "modified": "2026-02-03 11:44:42.559556",
  "modified_by": "Administrator",
  "module": "CRM-Go-To",
  "name": "Client Master",
